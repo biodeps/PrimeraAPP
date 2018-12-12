@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_RelativeLy"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/txt_Titol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:text="Titol"
+        android:textColor="@android:color/background_light"
+        android:textColorHighlight="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/txt_PosaElNom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txt_Titol"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/background_light"
+        android:padding="16dp"
+        android:text="Escriu el teu nom"
+        android:textColor="@color/gris_lletra"
+
+        android:textColorHighlight="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/txt_Resultat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ly_Nom"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/background_light"
+
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_horizontal"
+        android:text="Hola!"
+        android:textColor="@color/gris_lletra"
+        android:textColorHighlight="@color/colorAccent"
+        android:textSize="20dp"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ly_Nom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_alignTop="@+id/txt_Titol"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="120dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txt_Nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Cuál es tu nombre?"
+            android:textSize="24dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/btn_Acceptar"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentBottom="true"
+            android:padding="16dp"
+            android:background="@color/verd_fons"
+            android:gravity="center_horizontal"
+            android:text="ACEPTAR"
+            android:textColor="@android:color/background_light"
+            android:onClick="accepta"
+            />
+        <!-- Espaciado entre botones-->
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/btn_Cancelar"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentBottom="true"
+            android:padding="16dp"
+            android:background="@color/vermell_fons"
+            android:gravity="center_horizontal"
+            android:text="CANCELAR"
+            android:textColor="@android:color/background_light"
+            android:onClick="cancela"
+            />
+
+
+</LinearLayout>
+
+
+
+
+</RelativeLayout>
